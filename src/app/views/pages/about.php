@@ -1,3 +1,7 @@
-<?php 
+<?php require APPROOT . '/views/inc/header.php' ?>
 
-echo "About.php";
+    <h1><?php echo $data['title']; ?></h1>
+    <p><?php echo $data['description']; ?></p>
+    <p><?php echo 'Version: ' . '<strong>' . APPVERSION . '</strong>'; ?></p>
+
+<?php require APPROOT . '/views/inc/footer.php' ?>

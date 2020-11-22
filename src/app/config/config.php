@@ -18,3 +18,6 @@ define('URLROOT', $_ENV['URLROOT']);
 
 // Site Name
 define('SITENAME', $_ENV['APPNAME']);
+
+// App Version
+define('APPVERSION', '1.0.0');
