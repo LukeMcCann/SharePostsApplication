@@ -18,6 +18,22 @@ class User
         return $this->db->execute() ? true : false;
     }
 
+    public function login($email, $password) 
+    {
+        $this->db->query('SELECT * FROM users WHERE email = :email');
+        $this->db->bind(':email', $email);
+
+        $row = $this->db->single();
+
+        $hashed_password = $row->password;
+
+        if (password_verify($password, $hashed_password)) {
+            return $row;
+        } else {
+            return false;
+        }
+    }
+
     public function exists($email)
     {
         $this->db->query('SELECT * FROM users WHERE email = :value');
