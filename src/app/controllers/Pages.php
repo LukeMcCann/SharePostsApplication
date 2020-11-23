@@ -8,6 +8,10 @@ class Pages extends Controller
 
     public function index() 
     {
+        if (isLoggedIn()) {
+            redirect('posts');
+        }
+        
         $data = [
             'title' => 'Welcome to ' . ucwords(SITENAME),
             'description' => 'Simple social network built with the Bjornstad MVC PHP Framework'
