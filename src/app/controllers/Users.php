@@ -74,6 +74,30 @@ class Users extends Controller {
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+            $data = [
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
+                'email_err' => '',
+                'password_err' => '',
+            ];
+
+            // TODO: move to validation class
+            if (empty($data['email'])) {
+                $data['email_err'] = 'Please enter a valid email';
+            }
+
+            if (empty($data['password'])) {
+                $data['password_err'] = 'Please enter a password';
+            }
+
+            if (empty($data['email_err']) && $data['password_err']) {
+                die('Logged In');
+            } else {
+                $this->view('users/login', $data);
+            }
+
         } else {
             $data = [
                 'email' => '',
