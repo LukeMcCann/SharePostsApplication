@@ -13,8 +13,12 @@
         <div class="card card-body mb-3">
             <h4 class="card-title"><?php echo $post->title; ?></h4>
             <div class="bg-light p-2 mb-3">
-                Author: <?php echo $post->name; ?>
+                Author: <?php echo $post->name; ?> <br /> 
+                Date: <b><?php echo $post->postCreated; ?></b>
             </div>
+            <div class="card-text"><?php echo $post->body; ?></div>
+            <br />
+            <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $posts->postId; ?>" class="btn btn-dark">More</a>
         </div>
     <?php endforeach; ?>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
