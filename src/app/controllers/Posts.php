@@ -86,6 +86,7 @@ class Posts extends Controller
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data = [
+                'id' => $id,
                 'title' => trim($_POST['title']),
                 'body' => trim($_POST['body']),
                 'user_id' => $_SESSION['user_id'],
