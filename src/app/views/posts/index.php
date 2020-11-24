@@ -19,7 +19,7 @@
             </div>
             <div class="card-text"><?php echo $post->body; ?></div>
             <br />
-            <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $posts->postId; ?>" class="btn btn-dark">More</a>
+            <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="btn btn-dark">More</a>
         </div>
     <?php endforeach; ?>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
