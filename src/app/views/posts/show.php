@@ -11,4 +11,8 @@
     <hr />
     <a href="<?php echo URLROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>" class="a btn btn-dark">Edit</a>
  <?php endif; ?>
+
+ <form class="pull-right" action="<?php echo URLROOT; ?>/posts/delete/<?php echo $data['post']->id ?>" method="post" class="">
+    <input type="submit" value="Delete" class="btn btn-danger">
+</form>
 <?php require_once APPROOT . '/views/inc/footer.php'; ?>
