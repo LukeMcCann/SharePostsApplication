@@ -50,6 +50,9 @@ Bjornstad was built using docker WSL2 on a Windows 10 PC.
 
 > run: docker-compose up --build -d
 
+Note: As of MYSQL 5.7 docker-compose volumes no longer work when instantiating databases, as such, to run this project you will need to manually
+create the database. Future larger projects will use a workaround to this issue.
+
 > Open in browser: localhost:5000
 
 > login to phpmyadmin
