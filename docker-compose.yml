@@ -39,7 +39,6 @@ services:
             - "3306:3306"
         volumes:
             - ./mysql:/var/lib/mysql
-            - ./mysql/init.db:/docker-entrypoint-initdb.d/
         restart: always 
         environment:
             MYSQL_USER: ${MYSQL_USER}
