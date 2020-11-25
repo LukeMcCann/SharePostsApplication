@@ -1,11 +1,13 @@
-# Bjornstad
+# SharePost
 
 ## About
 
-Bjornstad (norse word, loosley translated to 'son of') is a simplistic MVC framework enabling developers to build their PHP applications
-using pure PHP. Bjornstad offers a simplistic routing engine allowing routes the be passed as slash parameters for an intuitive and clean-looking build. 
+SharePost is a practice application showcasing the [Bjornstad-MVC](https://github.com/Kodriboh/Bjornstad-MVC-Bootstrap) framework.
+This is a very basic example project used as a proof of concept to show Bjornstad
+in a project in its working state.
 
-Bjornstad does not aim to be a framework like that of Laravel, instead opting for a minimalist approach. Bjornstad MVC encourages exploration of MVC concepts, to build and improve upon the basis of the framework, utilised as a learning tool to teach MVC concepts and the basic uses of a simplistic framework, and how applications interact. 
+Please note: Bjornstad is a small MVC framework and should not be used for real-world projects
+in it's current state.
 
 ## Getting started
 
