@@ -33,3 +33,47 @@ exec into the php container to install dependencies `docker exec -ti php sh`
 - **PDO**
 
 Bjornstad was built using docker WSL2 on a Windows 10 PC. 
+
+## To Run This Project
+
+> Clone this repository
+
+> cd into the project root
+
+> set .env variables (see .env.example)
+
+> cd into src
+
+> set .env variables (see .env.example)
+
+> cd back into root
+
+> run: docker-compose up --build -d
+
+> Open in browser: localhost:5000
+
+> login to phpmyadmin
+
+> create a database (name same as .env DB_NAME)
+
+> create the following tables:
+
+<pre>
+    <code>
+        CREATE TABLE users (
+            id INT PRIMARY KEY NOT NULL, 
+            name VARCHAR(255) NOT NULL, 
+            email VARCHAR(255) NOT NULL, 
+            password VARCHAR(255) NOT NULL, 
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+        );
+
+        CREATE TABLE posts (
+            id INT PRIMARY KEY NOT NULL, 
+            user_id INT NOT NULL, 
+            title VARCHAR(255) NOT NULL, 
+            body TEXT NOT NULL, 
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+        );
+    </code>
+</pre>
